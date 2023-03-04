@@ -21,8 +21,10 @@ spec:
       - path: {{ default "/" .path }}
         pathType: {{ default "Prefix" .pathType}}
         backend:
-          serviceName: {{ template "dotbot.fullname" $ }}
-          servicePort: http
+          service:
+            name: {{ template "dotbot.fullname" $ }}
+            port:
+              name: http
   {{- end }}
   tls:
   {{- range .Values.ingress.hosts }}
