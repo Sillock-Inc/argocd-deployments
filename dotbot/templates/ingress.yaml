@@ -19,6 +19,7 @@ spec:
     http:
       paths:
       - path: {{ default "/" .path }}
+        pathType: {{ default "Prefix" .pathType}}
         backend:
           serviceName: {{ template "dotbot.fullname" $ }}
           servicePort: http
