@@ -6,6 +6,7 @@ spec:
   selector:
     app: dotbot
   ports:
-    - protocol: TCP
+    - name: http
+      protocol: TCP
       targetPort: 80
       port: 80
