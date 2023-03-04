@@ -7,7 +7,8 @@ ingress:
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
   hosts:
     - host: dotbot-api.sillock.co.uk
-      paths: ["/"]
+      paths: 
+       - "/"
    tls: 
     - secretName: dotbot-tls-certificate
       hosts:
