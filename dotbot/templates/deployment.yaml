@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dotbot
+spec:
+  selector:
+    matchLabels:
+      app: dotbot
+  template:
+    metadata:
+      labels:
+        app: dotbot
+    spec:
+      containers:
+      - name: dotbot
+        image: ghcr.io/sillock-inc/dobot:{{ .Values.imageTag }}
+        imagePullPolicy: Always
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "100m"
+        env:
+          - name: ASPNETCORE_URLS
+            value: http://+:80
