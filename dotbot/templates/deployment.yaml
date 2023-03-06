@@ -22,3 +22,13 @@ spec:
         env:
           - name: ASPNETCORE_URLS
             value: http://+:80
+          - name: Discord__BotToken
+            valueFrom:
+              secretKeyRef:
+                name: dotbot-creds
+                key: discord_token  
+          - name: MongoDbSettings__ConnectionString
+            valueFrom:
+              secretKeyRef:
+                name: dotbot-creds
+                key: mongodb_connection_string
