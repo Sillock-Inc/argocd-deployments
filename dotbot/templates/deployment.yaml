@@ -17,8 +17,8 @@ spec:
         imagePullPolicy: Always
         resources:
           limits:
-            memory: "128Mi"
-            cpu: "100m"
+            memory: "1Gi"
+            cpu: 1
         env:
           - name: ASPNETCORE_URLS
             value: http://+:80
