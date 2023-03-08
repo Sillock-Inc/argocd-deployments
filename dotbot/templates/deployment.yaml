@@ -32,3 +32,8 @@ spec:
               secretKeyRef:
                 name: dotbot-creds
                 key: mongodb_connection_string
+          - name: MongoDbSettings__DatabaseName
+            valueFrom:
+              secretKeyRef:
+                name: dotbot-creds
+                key: mongodb_db_name
