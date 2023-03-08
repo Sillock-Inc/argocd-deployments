@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: dotbot
-        image: ghcr.io/sillock-inc/dobot:{{ .Values.imageTag }}
+        image: ghcr.io/sillock-inc/dotbot:{{ .Values.imageTag }}
         imagePullPolicy: Always
         resources:
           limits:
